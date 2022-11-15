@@ -1,5 +1,6 @@
 @import "./base.css";
 @import "./products.css";
+@import "./contact.css";
 
 /**************************************************/
 /*****      LOGO                             ******/
@@ -29,12 +30,9 @@ h1 .company-logo {
 /*****      HERO BANNER                      ******/
 /**************************************************/
 
-
 .hero {
     width: 100%;
     height: 100vh;
-    min-height: 600px;
-    max-height: 800px;
     position: relative;
     display: grid;
     grid-template-rows: 100px 1fr;
@@ -42,16 +40,10 @@ h1 .company-logo {
 }
 
 header {
-    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 40px 100px;
-    z-index: -1;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-  }
+}
   
 header .logo {
     color: var(--app-white);
@@ -102,166 +94,72 @@ header .logo {
     z-index: 10;
     font-family: 'Poppins', sans-serif;
 }
-    
-.text h2 { 
+
+.text h2 {
     font-size: 5em;
     font-weight: 800;
     color: #fff;
     line-height: 1em;
     text-transform: uppercase;
-  }
-  
-  .text h3 {
+}
+
+.text h3 {
     font-size: 4em;
     font-weight: 700;
     color: #fff;
     line-height: 1em;
     text-transform: uppercase;
-  }
-  
-  .text p {
+}
+
+.text p {
     font-size: 1.1em;
     color: #fff;
     margin: 20px 0;
     font-weight: 400;
     max-width: 700px;
-  }
-  
-  .text a {
-    display: inline-block;
-    font-size: 1em;
-    background: #fff;
-    padding: 10px 30px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 500;
-    margin-top: 10px;
-    color: #111;
-    letter-spacing: 2px;
-    transition: 0.2s;
-  }
-  
-  .text a:hover {
-    letter-spacing: 6px;
-  }
-  
-
-
-
-/**************************************************/
-/*****      PRODUCTS                         ******/
-/**************************************************/
-
-.projects-container {
-    text-align: left;
-    height: 100vh;
-    background: radial-gradient(#e4ecf6, #f1f4fb);
 }
 
-.projects-container .row .card {
-    border-radius: 5px;
-    background-color: var(--app-light-text-color);
-    box-shadow: 0 20px 48px 0 var(--app-shadow-color);
-    transition: transform 450ms;
-    padding: 20px;
-}
-
-.projects-container .row .card h3 {
-    font-size: 14px;
-    font-weight: var(--app-h1-font-weight);
-    color: var(--app-light-grey-text-color);
-    text-transform: uppercase;
-}
-
-.projects-container .row .card p {
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--app-dark-grey-bg);
-}
-
-.projects-container .row .card:hover {
-    transform: translateY(-10px);
-}
-
-.projects-container .row .card div.top p {
-    margin: 10px 0 10px 0;
-}
-
-.projects-container .row .card div.top {
-    flex: 1;
-}
-  
-.projects-container .row .card .bottom {
-    flex: none;
-    text-align: center;
-    width: 100%;
-    border-top: 1px solid rgb(225, 225, 226);
-    padding: 20px 0px;
-}
-
-.card-btn { 
-    display: inline-block;
-    border-radius: 5px;    
-    text-align: center;
-    width: 100%;
-    background-color: var(--app-yellow);
-    padding: 5px 10px; 
-    transition: background-color 0.25s ease-in-out;  
-}
-
-.card-btn a {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--app-dark-text-color);
-    text-decoration: none;
-}
-
-.card-btn:hover { 
-    background-color: var(--app-yellow-hover);
-    cursor: pointer;
-}
-
-.projects-container .row .card .price {
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
-    border-bottom: 1px solid rgb(225, 225, 226);
-    border-top: 1px solid rgb(225, 225, 226);
+    align-items: center;
 }
 
-.projects-container .row .card .price .dollar {
-    font-size: .83em;
-    vertical-align: baseline;
+.menu ul {
     position: relative;
-    font-size: 21px;
-    font-weight: 600;
-    color: var(--app-light-blue);
 }
 
-.projects-container .row .card .price .money {
-    font-size: 50px;
-    font-weight: var(--app-h2-font-weight);
-    color: var(--app-light-blue);
+.menu ul li {
+    list-style: none;
 }
 
-.projects-container .row .card .price .pay-per {
-    font-size: var(--app-p-font-size);
-    font-weight: var(--app-p-font-weight);
-    color: var(--app-grey-text-color);
-    position: relative;
-    bottom: -2em;
+.menu ul li a  {
+    text-decoration: none;
+    font-size: 24px;
+    color: #111;
 }
 
-.projects-container .row .card .bold-p {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--app-yellow-hover);
-    display: block;
+.menu ul li a:hover {
+    color: #03a9f4;
 }
 
-.projects-container .row .card .features p {
-    padding: 5px 0px;
-    border-top: 1px solid rgb(225, 225, 226);
-    line-height: var(--app-main-line-height);
-    margin: 0px auto;
+@media (max-width: 991px) {
+    .showcase,
+    .showcase header
+    {
+        padding: 40px;
+    }
+    .text h2
+    {
+        font-size: 3em;
+    }
+    .text h3
+    {
+        font-size: 2em;
+    }
 }
